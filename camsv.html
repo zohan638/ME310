@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webcam Stream</title>
+</head>
+<body>
+    <h1>Webcam Stream</h1>
+    <img id="video-stream" src="{{ url_for('video_feed') }}" width="480" height="320" />
+    <img id="processed-stream" src="{{ url_for('single_image') }}" width="480" height="320" />
+    
+    <script type="text/javascript">
+        // Refresh the video stream every 100 milliseconds
+        setInterval(function() {
+            var videoImg = document.getElementById('video-stream');
+            videoImg.src = "{{ url_for('video_feed') }}" + "?" + new Date().getTime();
+        }, 100);
+
+        // Refresh the processed image every 100 milliseconds
+        setInterval(function() {
+            var processedImg = document.getElementById('processed-stream');
+            processedImg.src = "current_frame.jpg" + "?" + new Date().getTime();
+        }, 100);
+    </script>
+</body>
+</html>
