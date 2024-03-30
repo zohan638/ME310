@@ -1,10 +1,14 @@
 # ME310 Project Repository
 
-Welcome to the ME310 Project Repository! This repository is dedicated to housing the source code and resources for our interdisciplinary project. Our project focuses on creating innovative solutions through the integration of technology and design principles.
+Welcome to the ME310-Volvo 2023 Project Repository! 
 
 ## Overview
 
-The repository contains several key Python scripts and a directory for Teensy microcontroller code, aimed at facilitating our project's development. These scripts are designed to work together to achieve the project's goals, including controlling hardware components, handling MQTT messages, and managing video feeds.
+The repository contains several key Python and C++ scripts, used for integrating various sub-systems together running on a RaspberryPi. The key sub-systems here are:
+- `Teensy/Actuators`
+- `MQTT/WebApp`
+- `Camera Server + Droplet Detection`
+- ``
 
 ### Key Components
 
