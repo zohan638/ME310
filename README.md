@@ -2,6 +2,12 @@
 
 Welcome to the ME310-Volvo 2023 Project Repository! 
 
+## Project Diagram
+
+Here is a diagram illustrating the project architecture:
+
+![Project Diagram](images/project_diagram.png "Project Diagram")
+
 ## Overview
 
 The repository contains several key Python and C++ scripts, used for integrating various sub-systems together running on a RaspberryPi. The key sub-systems here are:
