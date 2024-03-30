@@ -26,4 +26,4 @@ The repository contains several key Python and C++ scripts, used for integrating
 
 ### Teensy Folder
 
-The `teensy` folder contains code specifically for the Teensy microcontroller, it handles interrupt on one of the pins used as a "fail-safe" layer, and sends speed command to the two ESCs controlling BLDC motors for blower and visor.
+The `teensy` folder contains teensy.ino (embedded C), for the Teensy microcontroller, it handles interrupt on one of the pins used as a "fail-safe" layer, and sends speed command to the two ESCs controlling BLDC motors for blower and visor.
