@@ -2,6 +2,8 @@
 
 Welcome to the ME310-Volvo 2023 Project Repository! 
 
+This is the final code stack for our ME310 project: bio-inspired sensor cleaning system for Volvo's autonomous vehicles.
+
 ## Project Diagram
 
 Here is a diagram illustrating the project architecture:
