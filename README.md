@@ -8,21 +8,16 @@ The repository contains several key Python and C++ scripts, used for integrating
 - `Teensy/Actuators`
 - `MQTT/WebApp`
 - `Camera Server + Droplet Detection`
-- ``
 
 ### Key Components
 
-- `Controller.py`: Manages the main control flow of the project, coordinating between different modules.
-- `Mqtt.py`: Handles MQTT messaging for real-time communication between devices.
-- `camsv.html` and `camsv.py`: Work together to facilitate video streaming services.
-- `cpp.py`: Contains utility functions used across the project.
-- `main.py`: The entry point of the project, initializing and starting the main application.
-- `video_feed.cpp`: A C++ file dedicated to managing video feed processing.
+- `main.py`: Starts the main application, takes vaious arguments as inputs, however, defaults are initialsed.
+- `Controller.py`: Initialises RaspberryPi GPIOs (for interrupt handling in Teensy), and connects to Teensy via Serial.
+- `Mqtt.py`: Handles MQTT messaging for real-time communication with the dynamic Web Application.
+- `camsv.html` and `camsv.py`: Hosts a Video Server (for Web Application) and an Image Sever (for Droplet Detection).
+- `video_feed.cpp`: A C++ file which uses OpenCV for droplet detection.
+- `cpp.py`: Wrapper for running the compiled droplet detection C++ file and communicate with the main application.
 
 ### Teensy Folder
 
-The `teensy` folder contains code specifically for the Teensy microcontroller, which is utilized in this project for its high-performance hardware control capabilities.
-
-## Getting Started
-
-To get started with this project, clone this repository to your local machine. Ensure you have Python installed, and install any dependencies listed in the project files.
+The `teensy` folder contains code specifically for the Teensy microcontroller, it handles interrupt on one of the pins used as a "fail-safe" layer, and sends speed command to the two ESCs controlling BLDC motors for blower and visor.
